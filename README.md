@@ -1,15 +1,9 @@
 # SDMP
 This is the offical implementation of 	
 ["A Simple Data Mixing Prior for Improving Self-Supervised Learning"](https://cihangxie.github.io/data/SDMP.pdf)
-by Sucheng Ren</strong>, 
-                  <a href="https://csrhddlam.github.io/">Huiyu Wang</a>, 
-                  <a href="https://zhengqigao.github.io/">Zhengqi Gao</a>,
-                  <a href="http://www.shengfenghe.com/">Shengfeng He</a>,
-                  <a href="http://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>,
-                  <a href="https://yuyinzhou.github.io/">Yuyin Zhou</a>,
-                  <a href="https://cihangxie.github.io/">Cihang Xie
+by [Sucheng Ren](https://oliverrensu.github.io/), [Huiyu Wang](https://csrhddlam.github.io/), [Zhengqi Gao](https://zhengqigao.github.io/), [Shengfeng He](http://www.shengfenghe.com/), [Alan Yuille](http://www.cs.jhu.edu/~ayuille/), [Yuyin Zhou](https://yuyinzhou.github.io/), [Cihang Xie](https://cihangxie.github.io/)
 
-
+![teaser](method.png)
 ## Plug-in example
 Here we show the core part of our paper based on [Moco v3](https://arxiv.org/abs/2104.02057)
 
