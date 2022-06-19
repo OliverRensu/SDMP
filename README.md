@@ -4,8 +4,38 @@ This is the offical implementation of
 by [Sucheng Ren](https://oliverrensu.github.io/), [Huiyu Wang](https://csrhddlam.github.io/), [Zhengqi Gao](https://zhengqigao.github.io/), [Shengfeng He](http://www.shengfenghe.com/), [Alan Yuille](http://www.cs.jhu.edu/~ayuille/), [Yuyin Zhou](https://yuyinzhou.github.io/), [Cihang Xie](https://cihangxie.github.io/)
 
 ![teaser](method.png)
+
+## MoCo with SDMP
+Installing packages as [Moco v3](https://arxiv.org/abs/2104.02057).
+
+Training ViT small on 4 nodes.
+```
+cd moco
+# ImageNet
+# On the first node
+python main_moco.py \
+  -a vit_small \
+  --optimizer=adamw --lr=1.5e-4 --weight-decay=.1 \
+  --epochs=300 --warmup-epochs=40 \
+  --stop-grad-conv1 --moco-m-cos --moco-t=.2 \
+  --dist-url 'tcp://hostnode:port' \
+  --multiprocessing-distributed --world-size 4 --rank 0 \
+  /path/to/imagenet
+# On the rest node --rank 1, 2, 3
+
+# ImageNet100
+python main_moco.py \
+  -a vit_small -b 512 \
+  --optimizer=adamw --lr=1.5e-4 --weight-decay=.1 \
+  --epochs=300 --warmup-epochs=40 \
+  --stop-grad-conv1 --moco-m-cos --moco-t=.2 \
+  --dist-url 'tcp://localhost:port' \
+  --multiprocessing-distributed --world-size 1 --rank 0 \
+  /path/to/imagenet100
+```
+
 ## Plug-in example
-Here we show the core part of our paper based on [Moco v3](https://arxiv.org/abs/2104.02057)
+
 
 The extra version:
 ```
