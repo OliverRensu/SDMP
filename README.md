@@ -35,7 +35,7 @@ python main_moco.py \
 ```
 ### Checkpoints
 
-The checkpoint of SDMP with 100 epochs pretraining (--epochs=100) is at [Google Drive](https://drive.google.com/drive/folders/1JLbyz5XiJd5D6HyazABSTxc1z0vH-t6S?usp=sharing). We also release the checkpoint of moco with 100 epochs pretraining for comparison. We make \% improvements. The checkpoint of 300 epochs is coming soon.
+The checkpoint of SDMP with 100 epochs pretraining (--epochs=100) is at [Google Drive](https://drive.google.com/drive/folders/1JLbyz5XiJd5D6HyazABSTxc1z0vH-t6S?usp=sharing). We also release the checkpoint of moco with 100 epochs pretraining for comparison. We make 1.2\% improvements. The checkpoint of 300 epochs is coming soon.
 
 
 If you have any question, feel free to email [Sucheng Ren](oliverrensu@gmail.com)
