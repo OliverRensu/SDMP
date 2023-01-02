@@ -60,5 +60,4 @@ If you think think this paper and responsity is useful, please cite
   booktitle = {CVPR},
   year      = {2022}
 }
-}
 ```
